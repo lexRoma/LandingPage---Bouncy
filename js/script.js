@@ -143,21 +143,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	const scrollitems = document.querySelectorAll('.scroll-item');
 
 	const scrollAnimation = () => {
-		let windowCenter = (window.innerHeight / 2) + window.scrollY;
+		let windowCenter = (window.innerHeight / 1.2) + window.scrollY;
 		scrollitems.forEach(el => {
 			let scrollOffset = el.offsetTop + (el.offsetHeight / 2);
 			if (windowCenter >= scrollOffset) {
 				el.classList.add('animation-class');
+				
 			} else {
 				el.classList.remove('animation-class');
 			}
+			
 		});
 	};
-
+	
 	scrollAnimation();
+	Circlle('.round');
 	window.addEventListener('scroll', () => {
 		scrollAnimation();
+		
 	})
 
 
 } );
+

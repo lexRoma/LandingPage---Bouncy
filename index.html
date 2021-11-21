@@ -49,9 +49,9 @@
 
 
       <div class="first-part__content">
-    	  <div class="first-part__title _anim-items">We Are Code Cafe</div>
+    	  <div class="first-part__title scroll-item">We Are Code Cafe</div>
 
-    	  <div class="first-part__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</div>
+    	  <div class="first-part__subtitle scroll-item">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</div>
 
     	  <a href="#Hello" id="down"><div class="first-part__down"  >
     	  	<i class="fas fa-chevron-down"></i>
@@ -78,10 +78,10 @@
 
     	<div class="content">
     	  
-    	  <div class="details__icons">
-    	  	<img src="img/details-icon_1.png">
-    	  	<img src="img/details-icon_2.png">
-    	  	<img src="img/details-icon_3.png">
+    	  <div class="details__icons scroll-item">
+    	  	<img src="img/details-icon_1.png" class="details__icon scroll-item" >
+    	  	<img src="img/details-icon_2.png" class="details__icon scroll-item">
+    	  	<img src="img/details-icon_3.png" class="details__icon scroll-item">
     	  </div>
     	  <div class="details__main">
     	  	<div class="details__title">Creative Ideas</div>
@@ -138,10 +138,10 @@
 
     		  <div class="services__left">
     			<div class="services__icons">
-    				<img src="img/services_01.png">
-    				<img src="img/services_02.png">
-    				<img src="img/services_03.png">
-    				<img src="img/services_04.png">
+    				<img src="img/services_01.png" class="services__icon scroll-item">
+    				<img src="img/services_02.png" class="services__icon scroll-item">
+    				<img src="img/services_03.png" class="services__icon scroll-item">
+    				<img src="img/services_04.png" class="services__icon scroll-item">
     			</div>
     			<div class="services__descr">
     				<div class="services__title">Graphic Design</div>
@@ -152,9 +152,9 @@
     			</div>
     		  </div>
 
-    	    <div class="services__right">
+    	    <div class="services__right scroll-item">
 
-				<section id="circleBar">
+				<section id="circleBar" class="scroll-item">
 					
 
 					<div class="container">
@@ -787,7 +787,7 @@
         </div>
 
       <div class="price__content">
-      	<div class="price__block">
+      	<div class="price__block scroll-item">
       		<div class="price__title">Premium</div>
       		<p class="price__value">$ 60</p>
       		<p class="per-month">Per Month</p>
@@ -802,7 +802,7 @@
       		<input class="price__hover__button" type="button" name="Let’s Start" value="Let’s Start >">
       	</div>
 
-      	<div class="price__block">
+      	<div class="price__block scroll-item">
       		<div class="price__title">Standart</div>
       		<p class="price__value">$ 70</p>
       		<p class="per-month">Per Month</p>
@@ -817,7 +817,7 @@
       		<input class="price__hover__button" type="button" name="Let’s Start" value="Let’s Start >">
       	</div>
 
-      	<div class="price__block">
+      	<div class="price__block scroll-item">
       		<div class="price__title">Exclusive</div>
       		<p class="price__value">$ 80</p>
       		<p class="per-month">Per Month</p>
@@ -1004,7 +1004,8 @@
             $(el).circleProgress({
                 fill: {color:'#19bd9a'},
                 emptyFill: "rgba(4, 115, 120, 1)",
-                startAngle: (-Math.PI)*2.5
+                startAngle: (-Math.PI)*2.5,
+				
                 
             })
             

@@ -308,9 +308,11 @@ header {
 	letter-spacing: 5px;
 	padding-top: 12%; 
 
-	transform: translate(0px, 60%);
+	transform: translate(0px, 40%);
 	opacity: 0;
-	transition: all 0.8s ease 0s;
+	transition: all 0.8s ease-in-out 0s;
+
+	transition-delay: 1s;
 	
 }
 .first-part__title._start {
@@ -330,6 +332,12 @@ header {
 	padding-left: 25%;
 	letter-spacing: 2px;
 	line-height: 29px;
+
+	transform: translate(0px, 60%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+
+	transition-delay: 2s;
 }
 
 .first-part__down {
@@ -473,7 +481,23 @@ header {
 
 .details__icons img {
 	padding: 0 2%;
+
 }
+
+.details__icon {
+	transform: translate(0px, 60%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.details__icon:nth-child(2) {
+	transition-delay: 200ms;
+}
+
+.details__icon:nth-child(3) {
+	transition-delay: 400ms;
+}
+
 
 .details__text {
 	display: flex;
@@ -652,6 +676,24 @@ header {
 }
 .services__icons img {
     padding: 5px 0;
+}
+
+.services__icon {
+	transform: translate(-20%, 0);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.services__icon:nth-child(2) {
+	transition-delay: 200ms;
+}
+
+.services__icon:nth-child(3) {
+	transition-delay: 400ms;
+}
+
+.services__icon:nth-child(4) {
+	transition-delay: 600ms;
 }
 
 .services__left {
@@ -1754,6 +1796,10 @@ header {
 
 	background-color: #fff;
 	position: relative;
+
+	transform: translate(0px, 60%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
 }
 
 .price__block:hover .price__hover__button {
@@ -4337,6 +4383,11 @@ footer {
 
     
 
+}
+
+.animation-class {
+	transform: translate(0px,0px);
+	opacity: 1;
 }
 
 
