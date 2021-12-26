@@ -46,34 +46,28 @@ $(document).ready(function(){
 
 });
 
+//====== Burger ==================================================//
 
 
-function burgerMenu(selector) {
-  let menu = $(selector);
-  let button = menu.find('.burger-menu_button', '.burger-menu_lines');
-  let links = menu.find('.menu__link');
-  let overlay = menu.find('.burger-menu_overlay');
-  
-  button.on('click', (e) => {
-    e.preventDefault();
-    toggleMenu();
-  });
-  
-  links.on('click', () => toggleMenu());
-  overlay.on('click', () => toggleMenu());
-  
-  function toggleMenu(){
-    menu.toggleClass('burger-menu_active');
-    
-    if (menu.hasClass('burger-menu_active')) {
-      $('body').css('overlow', 'hidden');
-    } else {
-      $('body').css('overlow', 'visible');
-    }
-  }
-}
 
-burgerMenu('.burger-menu');
+
+$(document).ready(function() {
+    $('.burger-menu_button').click(function(event) {
+        $('.burger-menu_button, .header__menu, .first-part__title, .first-part__subtitle, .burger-menu_overlay').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
+});
+
+$(document).ready(function() {
+    $('.menu__link').click(function(event) {
+        $('.burger-menu_button, .header__menu, .first-part__title, .first-part__subtitle, .burger-menu_overlay').removeClass('active');
+        $('body').removeClass('lock');
+    });
+});
+
+
+//====== Map open==================================================//
+
 
 document.getElementById('seeMap').onclick = function() {
 	document.getElementById('mapCover').classList.add('invisible');
@@ -84,6 +78,9 @@ document.getElementById('mapCover').onclick = function() {
 	document.getElementById('mapCover').classList.add('invisible');
 	document.getElementById('seeMap').classList.add('invisible');
 }
+
+
+
 
 /*
 document.getElementById('down').onclick = function() {
