@@ -169,7 +169,7 @@ var div = document.createElement('div');
   div.className = "features__bottom";
   div.innerHTML = '<div class="features__bottom__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis </div><input class="features__bottom__button" type="button" name="" value="Submit Now">';
   
-var screenWindows = window.innerWidth;  ///screen.width;
+var screenWindows = window.screen.availWidth;  ///screen.width;
     if (screenWindows >= 320 && screenWindows <= 767) {
        var f = document.getElementById("img1");
        f.appendChild(div);
