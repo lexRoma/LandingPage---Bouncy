@@ -527,7 +527,7 @@ html {
 .features__images {
 	display: flex;
 	flex: 1 1 0;
-
+	flex-wrap: wrap;
 	
 	
 	/*flex-grow: 1;*/	
@@ -544,12 +544,38 @@ html {
     
 }
 
+.features__images__block1 {
+	width: 50%;
+}
+
+.features__images__block2 {
+	width: 50%;
+	display: flex;
+}
+
+.features__images__block3 {
+	width: 100%;
+}
+
 .features__img--1 {
-	width: 52.8%;
+	width: 100%;
 }
 .features__img--2, .features__img--3 {
-	width: 25%;
+	width: 100%;
 }
+.features__img--2 img {
+	width: 100%;
+}
+
+.features__img--3 img {
+	width: 100%;
+}
+
+.features__img--1 img {
+	width: 100%;
+}
+
+
 .features__img--2 {
     background: url(../img/bw_featured_02_03.jpg);
 }
@@ -594,7 +620,7 @@ html {
 .features__bottom {
 	background: url(../img/featured_04.jpg) no-repeat top / cover;
 	
-	height: 30%;
+	height: 100%;
 	left: 0;
 	display: flex;
 	position: relative;
@@ -2328,6 +2354,140 @@ footer {
 	}
 }
 
+@media (min-width: 913px) and (orientation: portrait) {
+	.header__container {
+		padding: 57px 60px;
+	}
+	
+		.header__logo a {
+		font-size: 28px;
+		
+		}
+	
+		/* Menu*/
+	
+		.header__menu {
+			visibility: hidden;		
+		}
+	
+		.header__menu.active {
+			visibility: visible;
+		}
+	
+		  .header__menu a {
+		font-size: 30px;
+		font-family: 'Open Sans';
+		color: #fff;
+		text-decoration: none;
+		padding: 0px 20px;
+		
+		}
+	
+		.header__menu {
+		top:100px;
+		right: 0;
+		left: 0;
+		z-index: 3;
+		position: absolute;
+		}
+	
+	
+	
+	
+		.header__menu li {
+			line-height: 1.5;
+			padding: 20px 10px;
+			padding-left: 40px;
+	
+			text-align: left;
+	
+			vertical-align: bottom;
+			border: none;
+	
+			background: rgba(255, 255, 255, 0.5);
+		}
+	
+		.header__menu li:hover {
+		border: none;
+		border-radius: 0em;
+		}
+	
+	
+		.active {
+			visibility: visible;
+		   /*background-color: rgba(255, 255, 255, 0.5);*/
+		}
+	
+		.menu__list {
+		display: flex;
+		flex-direction: column;
+	
+		justify-content: space-between;
+		text-align: left;
+	
+		margin: 0;
+	
+		height: 100%;
+	
+		}
+		.menu__list ul {
+			margin: 0;
+			padding: 0;
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		.burger-menu_button {
+		visibility: visible;
+		}
+	
+	
+	
+		.first-part__title {
+		padding-top: 40%; 	
+		}
+	
+		.first-part__subtitle {	
+		width: 80%;	
+		padding-top: 5%; 
+		text-align: center;
+		padding-left: 10%;	
+		}
+	
+		.first-part__down {
+		margin-top: 47%;
+	 
+		}
+
+		.header__logo a {
+			font-size: 45px;
+		}
+
+		.first-part__title {
+			font-size: 74px;
+		}
+
+		.first-part__subtitle {
+			font-size: 46px;
+			letter-spacing: 7px;
+    		line-height: 57px;
+			width: 83%;
+			padding-top: 9%;
+		}
+
+		.first-part__down {
+			font-size: 34px;
+			width: 80px;
+			height: 80px;
+		}
+}
+
 
 @media (max-width: 1024px) {  /*For iPad*/
     .header__container {
@@ -2355,7 +2515,8 @@ footer {
     }
 
     .first-part__title {
-	padding-top: 20%; 
+	/* padding-top: 20%;  */
+	padding-top: 30vh;
 	
     }
 
@@ -3135,7 +3296,15 @@ footer {
     	margin-bottom: -21%;
     }
 
+	.features__images__block1 {
+		width: 100%;
+	}
 
+	.features__images__block2 {
+		width: 100%;
+	}
+
+	
 
     .features__images {
     	flex-wrap: wrap;
@@ -3149,7 +3318,7 @@ footer {
 
     .features__img--1 {
     	width: 100%;
-    	padding-bottom: 20.5%;
+    	/* padding-bottom: 20.5%; */
     	
     }
 
@@ -3159,8 +3328,8 @@ footer {
     }
 
     .features__bottom {
-    	bottom: 550px;
-    	height: 10%;
+    	/* bottom: 550px; */
+    	height: 20vh;
 
     }
 
@@ -3706,6 +3875,48 @@ footer {
 /*==========================================================*/
 /*==========================================================*/
 /*==========================================================*/
+
+@media (max-width: 600px) {
+	.section__white__inner {
+		display: block;
+	}
+	.about_us__content {
+		width: 100%;
+		/* padding-top: 5%; */
+	}
+
+	.about_us__image {
+		width: 100%;
+	}
+
+	.details__text {
+		display: block;
+	}
+
+	.details__text__left {
+		width: 100%;
+		padding-bottom: 3vh;
+	}
+
+	.details__text__right {
+		width: 100%;
+	}
+}
+
+
+@media (max-width: 480px) {
+	.about_us__image img{
+		padding-left: 27%;
+	}
+
+	.about_us__btn {
+		margin-left: 27%;
+	}
+
+
+
+
+}
 
 @media (max-width: 320px) {  /*For iPhone*/
     
