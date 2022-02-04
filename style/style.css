@@ -2354,6 +2354,12 @@ footer {
 	}
 }
 
+@media (min-width: 820px) and (max-width: 911px) and (orientation: portrait) {
+	.header__menu li {
+		padding: 10px 8px;
+	}
+}
+
 @media (min-width: 913px) and (orientation: portrait) {
 	.header__container {
 		padding: 57px 60px;
@@ -2434,21 +2440,9 @@ footer {
 			margin: 0;
 			padding: 0;
 		}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 		.burger-menu_button {
 		visibility: visible;
 		}
-	
-	
-	
 		.first-part__title {
 		padding-top: 40%; 	
 		}
@@ -3095,6 +3089,8 @@ footer {
 }
 
 
+
+
 @media (max-width: 768px) {  /*For iPad*/
 	.lock {
         overflow: hidden;
@@ -3124,11 +3120,11 @@ footer {
 	}
 
   	.header__menu a {
-	font-size: 30px;
+	font-size: 36px;
 	font-family: 'Open Sans';
 	color: #fff;
 	text-decoration: none;
-    padding: 0px 20px;
+    padding: 0px 0px;
     
 	}
 
@@ -3144,7 +3140,7 @@ footer {
 
 
 	.header__menu li {
-		line-height: 1.5;
+		line-height: 2;
 		padding: 20px 10px;
 		padding-left: 40px;
 
@@ -3293,7 +3289,7 @@ footer {
     /*============================*/
     /*============================*/
     .section__white--featured {
-    	margin-bottom: -21%;
+    	/* margin-bottom: -21%; */
     }
 
 	.features__images__block1 {
@@ -3318,8 +3314,7 @@ footer {
 
     .features__img--1 {
     	width: 100%;
-    	/* padding-bottom: 20.5%; */
-    	
+		margin-bottom: -3px;	
     }
 
     .features__img--2, .features__img--3 {
@@ -3329,19 +3324,22 @@ footer {
 
     .features__bottom {
     	/* bottom: 550px; */
-    	height: 20vh;
+    	height: 17vh;
 
     }
 
-    .features__bottom__text {
-	
-	padding: 60px 245px 60px 60px;
+    .features__bottom__text {	
+		padding: 6% 34% 6% 4%;
 
-	font-size: 20px;
-	text-align: left;
-	font-family: 'Open Sans';
-	font-weight: 400;
+		font-size: 23px;
+		text-align: left;
+		font-family: 'Open Sans';
+		font-weight: 400;
     }
+
+	.features__bottom__button {
+		height: 30%;
+	}
 
 
 
@@ -3889,6 +3887,10 @@ footer {
 		width: 100%;
 	}
 
+	.features__bottom__text {
+		padding: 6% 45% 6% 4%;
+	}
+
 	.details__text {
 		display: block;
 	}
@@ -3900,6 +3902,30 @@ footer {
 
 	.details__text__right {
 		width: 100%;
+	}
+
+	.price__content {
+		display: block;
+		
+	}
+
+	.price__block {
+		width: 90%;
+    	height: 30vh;
+		margin: 0 auto;
+		margin-bottom: 26px;
+	}
+
+	.price__title {
+		padding: 6% 20%;
+	}
+
+	.price__value {
+		padding-top: 12%;
+	}
+
+	.price__hover__button {
+		padding: 7% 13%;
 	}
 }
 
@@ -3913,7 +3939,27 @@ footer {
 		margin-left: 27%;
 	}
 
+	canvas {
+		height: 100px;
+    	width: 100px;
+	}
 
+	.features__bottom {
+		height: 22vh;
+	}
+
+	.features__bottom__text {
+		padding: 6% 11% 6% 11%;
+	}
+
+	.features__bottom__button {
+		top: 70%;
+		transform: translate(+50%, -50%);
+		right: 50%;
+		height: fit-content;
+    	padding: 13px 32px;
+		font-size: 16px;
+	}
 
 
 }
@@ -4606,6 +4652,12 @@ footer {
 
     
 
+}
+
+@media (orientation: portrait) and (max-height: 915px) {
+	.header__menu li {
+		line-height: 1.6;
+	}
 }
 
 .animation-class {
