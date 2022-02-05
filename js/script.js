@@ -35,7 +35,7 @@ $(document).ready(function(){
 	$('.theteam__slider').slick({
 		arrows:false,
 		dots:true,
-		autoplay:true,
+		//autoplay:true,
 		autoplaySpeed:5000,
 		pauseOnFocus:true,
 		pauseOnHover:true,
