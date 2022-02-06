@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('.testimonials__slider').slick({
 		dots:true,
-		autoplay:true,
+		// autoplay:true,
 		autoplaySpeed:5000,
 		pauseOnFocus:true,
 		pauseOnHover:true,
