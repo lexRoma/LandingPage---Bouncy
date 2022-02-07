@@ -1026,16 +1026,17 @@
                 $(this). find('strong').text(String(stepValue.toFixed(2)).substr(2)/* + '%'*/);
             });
 
-			if (screenWindows >= 320 && screenWindows <= 500) {
+			if (screenWindows >= 420 && screenWindows <= 500) {
 				$(el).circleProgress({
 					size: 110,
 				
             	})	
 			}
 
-			if (screenWindows >= 320 && screenWindows <= 420) {
+			if (screenWindows >= 320 && screenWindows <= 419) {
 				$(el).circleProgress({
-					size: 100,
+					size: 80,
+					thickness: 4,
 				
             	})	
 			}
