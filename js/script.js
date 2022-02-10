@@ -45,6 +45,40 @@ $(document).ready(function(){
 	});
 
 });
+//====== Swiper for portfolio ====================================//
+
+const swiper = new Swiper('.swiper', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
+  
+	// If we need pagination
+	pagination: {
+		clickable: true,
+		
+		renderBullet: function (index, className) {
+		var arr = new Array("All works", "Prints", "Identifies");
+		
+		return  `<div class="swiper-pagination-bullet">` + (arr[index]) + ` <span class="border"></span></div>`;
+		
+		},
+		
+		el: '.swiper-pagination',
+	},
+  
+	// Navigation arrows
+	// navigation: {
+	//   nextEl: '.swiper-button-next',
+	//   prevEl: '.swiper-button-prev',
+	// },
+  
+	// And if we need scrollbar
+	scrollbar: {
+	  el: '.swiper-scrollbar',
+	},
+  });
+
+
 
 //====== Burger ==================================================//
 
