@@ -57,7 +57,7 @@ const swiper = new Swiper('.swiper', {
 		clickable: true,
 		
 		renderBullet: function (index, className) {
-		var arr = new Array("All works", "Prints", "Identifies");
+		var arr = new Array("All works", "Prints", "Identify", "HTML", "WordPress", "Web", "Branding");
 		
 		return  `<div class="swiper-pagination-bullet">` + (arr[index]) + ` <span class="border"></span></div>`;
 		
