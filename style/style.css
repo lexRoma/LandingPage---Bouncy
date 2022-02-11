@@ -567,6 +567,7 @@ html {
 
 .features__img--1 {
 	width: 100%;
+	height: 100%;
 }
 .features__img--2, .features__img--3 {
 	width: 100%;
@@ -885,7 +886,7 @@ html {
 	display: flex;
 	justify-content: space-between;
 	padding: 0 130px;
-	padding-top: 8%;
+	padding-top: 5%;
 }
 
 
@@ -2668,7 +2669,7 @@ footer {
 	display: flex;
 	/* justify-content: space-between; */
 	
-	padding: 0 36% 2% 36%;
+	/* padding: 0 36% 2% 36%; */
     }
 
     .details__icons img {
@@ -3400,9 +3401,11 @@ footer {
     	
     }
 
+
     .features__img--1 {
     	width: 100%;
-		margin-bottom: -3px;	
+		margin-bottom: -3px;
+		height: fit-content;	
     }
 
     .features__img--2, .features__img--3 {
@@ -3477,7 +3480,7 @@ footer {
 	line-height: 25px;
 	letter-spacing: 1px;
 	font-weight: 400;
-	width: 90%;
+	width: 100%;
 
     }
 
@@ -3520,10 +3523,10 @@ footer {
     
 
     .content--team {
-    
-    display: block;
-    
-}
+		
+    	display: block;
+    	padding: 70px 10% 70px 10%;
+	}
 
 
     .team-quotes__descr {
@@ -3535,9 +3538,6 @@ footer {
     padding-bottom: 2%;
     }
 
-    .content--team {
-	padding: 70px 80px 70px 80px;
-    }
 
     .team-quotes__comp {
 	visibility: collapse;
@@ -3685,10 +3685,11 @@ footer {
     }
 
     .bottom__content {
-	background: url(../img/portfolio_bottom.jpg) top / cover no-repeat;
-	width: 100%;
-	height: 150px;
-	padding-top: 5%;
+		background: url(../img/portfolio_bottom.jpg) top / cover no-repeat;
+		width: 100%;
+		height: 150px;
+		padding-top: 5%;
+		
     }
 
     .bottom__text {
@@ -3840,7 +3841,8 @@ footer {
     }
 
     .testimonials__slider__content {
-    width: 70%;
+		
+    	width: 70%;
     }
 
     .testimonials__nav {
@@ -4034,6 +4036,10 @@ footer {
 		padding: 6% 45% 6% 4%;
 	}
 
+	.lets-talk__text {
+		padding-top: 6%;
+	}
+
 	.portfolio__menu__list {
 		flex-wrap: wrap;
     	
@@ -4041,6 +4047,10 @@ footer {
 
 	.portfolio__menu__list li {
 		padding: 0 4%;
+	}
+
+	.details__title {
+		padding-top: 12%;
 	}
 
 	.details__text {
@@ -4203,6 +4213,15 @@ footer {
     	width: 100px;
 	}
 
+	#circleBar .round strong {
+		margin-top: -46px;
+	}
+
+	#circleBar .round .percents {
+		left: 71%;
+    	margin-top: -46px;
+	}
+
 	.features__bottom {
 		height: 22vh;
 	}
@@ -4220,6 +4239,11 @@ footer {
 		font-size: 16px;
 	}
 
+	.bottom__content {
+		
+		padding-bottom: 5%;
+    }
+
 	/* .portfolio__col:nth-child(2) {
 		display: none;
 	}
@@ -4231,7 +4255,30 @@ footer {
 
 }
 
+@media (max-width: 420px) {
+	#circleBar .round strong {
+		position: absolute;
+		top: 64%;
+		left: 46%;
+		margin-top: -47px;
+		transform: translate(-50%);
+		font-size: 26px;
+		color: #777;
+		font-weight: 100;
+	}
+
+	#circleBar .round .percents {
+		left: 71%;
+		margin-top: -44px;
+	}
+}
+
 @media (max-width: 400px) {
+
+	.lets-talk__text {
+		padding-top: 8%;
+	}
+
 	.testimonials__slider {
 		height: 56vh;
 		min-height: 642px;
@@ -4253,6 +4300,18 @@ footer {
 	.content--portfolio {
 		padding-top: 32%;
 		
+	}
+
+	.blog__item {
+		width: 100%;
+		height: 680px;
+		margin-top: 3px;
+	}
+}
+
+@media (max-width: 330px) {
+	.swiper-pagination-bullet {
+		margin: 0 13px !important;
 	}
 }
 
@@ -4324,9 +4383,9 @@ footer {
     /*============================*/
     /*============================*/
     
-    .content {
+    /* .content {
 	padding: 0 10% 5% 10%;
-    }
+    } */
 
     .section__top {
     padding: 70px 0 55px 0;
@@ -4338,11 +4397,10 @@ footer {
 
     }
     .section__top__text {
-
-	width: 60%;
-	padding: 0 20%;
-
-    }
+		width: 81%;
+		padding: 0;
+		margin: 0 auto;
+	}
 
     .details__icons {
 	display: flex;
@@ -4375,11 +4433,7 @@ footer {
 
     /*============================*/
     /*============================*/
-    .section__white--featured {
-    	margin-bottom: -21%;
-    }
-
-
+    
 
     .features__images {
     	flex-wrap: wrap;
@@ -4522,7 +4576,7 @@ footer {
     }
 
     .content--team {
-	padding: 70px 80px 70px 80px;
+	 	/* padding: 70px 80px 70px 80px; */
     }
 
     .team-quotes__comp {
@@ -4547,10 +4601,17 @@ footer {
     /* ===============portfolio=================== */
 
     .content--portfolio {
-	
 		padding: 0 6px;
-		padding-top: 8%;
-    }
+		padding-top: 29%;
+	}
+
+	.border {
+		margin: 10px auto 7px;
+	}
+
+	.swiper-pagination {
+		bottom: calc(100% - 5rem) !important;
+	}
 
 	
 
@@ -4783,20 +4844,20 @@ footer {
 
     .lets-talk {
 	
-	height: 17%;
+		height: 17%;
     }
 
     .lets-talk__text {
 
-	padding-top: 5%;
-	padding-bottom: 3%;
+		padding-top: 8%;
+		padding-bottom: 3%;
     }
 
     .lets-talk__button {
-	margin-left: 50%;
-    transform: translate(-50%, 0); 
+		margin-left: 50%;
+		transform: translate(-50%, 0); 
 
-	height: 25%;
+		height: 25%;
 	/* width: 18%; */
 
 	margin-bottom: 0;
