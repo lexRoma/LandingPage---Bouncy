@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('.testimonials__slider').slick({
 		dots:true,
-		// autoplay:true,
+		autoplay:true,
 		autoplaySpeed:5000,
 		pauseOnFocus:true,
 		pauseOnHover:true,
@@ -16,7 +16,7 @@ $(document).ready(function(){
 	$('.blog__slider').slick({
 		arrows:false,
 		dots:true,
-		// autoplay:true,
+		autoplay:true,
 		autoplaySpeed:5000,
 		pauseOnFocus:true,
 		pauseOnHover:true,
@@ -35,7 +35,7 @@ $(document).ready(function(){
 	$('.theteam__slider').slick({
 		arrows:false,
 		dots:true,
-		//autoplay:true,
+		autoplay:true,
 		autoplaySpeed:5000,
 		pauseOnFocus:true,
 		pauseOnHover:true,
@@ -74,7 +74,7 @@ const swiper = new Swiper('.swiper', {
   
 	// And if we need scrollbar
 	scrollbar: {
-	  el: '.swiper-scrollbar',
+		el: '.swiper-scrollbar', hide: true,
 	},
   });
 
@@ -116,58 +116,7 @@ document.getElementById('mapCover').onclick = function() {
 
 
 
-/*
-document.getElementById('down').onclick = function() {
-	const el = document.getElementsByName('hello');
-	el.scrollIntoView({behavior: "smooth"});
 
-}
-*/
-
-
-/*
-document.addEventListener('DOMContentLoaded', () => {
-
-
-	let animItems = document.querySelectorAll('._anim-items');
-
-	if (animItems.length > 0) {
-		window.addEventListener('scroll', animOnScroll);
-		function animOnScroll() {
-			for (let i = 0; i < animItems.length; i++) {
-				const animItem = animItems[i];
-				const animItemHeight = animItem.offsetHeigh;
-				const animItemOffset = offset(animItem).top;
-				const animStart = 4;
-
-
-				let animItemPoint = window.innerHeight - animItemHeight / animStart;
-
-				if (animItemHeight > window.innerHeight) {
-					animItemPoint = window.innerHeight - window.innerHeight / animStart;
-				}
-
-				if ((window.scrollY > animItemOffset - animItemPoint) && window.scrollY < (animItemOffset + animItemHeight)) {
-					animItem.classList.add('_start');
-				} else {
-					animItem.classList.remove('_start');
-				}
-			}
-		}
-
-		function offset(el) {                           // Важное, сохрани!!!!!!!
-			var rect = el.getBoundingClientRect(),
-		scrollLeft = window.scrollX || document.documentElement.scrollLeft,
-		scrollTop = window.scrollY || document.documentElement.scrollTop;
-		return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-		}
-		setTimeout(() => {
-			animOnScroll()
-		}, 200)
-	}
-
-})
-*/
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -197,10 +146,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
 } );
 
+// ========== slider modification ===================================//
+
+document.addEventListener('DOMContentLoaded', () => {
+	let portfolio__blocks = document.querySelectorAll('.portfolio__item');
+	console.log(portfolio__blocks);
+
+	portfolio__blocks.forEach(function(block) {
+		
+		var h = block.clientHeight;
+		let portfolio__title = block.getElementsByTagName('h3');
+		let text = block.getElementsByTagName('p');
+
+
+		console.log(portfolio__title);
+		var screenWindows = window.screen.availWidth;
+
+		if (h < 260 && screenWindows < 1500 && screenWindows >= 1380 ) {
+			portfolio__title[0].style.display = 'none';
+			text[0].style.top = 0;
+		}
+		if (h < 280 && screenWindows < 1380) {
+			portfolio__title[0].style.display = 'none';
+			text[0].style.top = 0;
+		}
+	});
+})
 
 
 
-//====== Blocks position==================================================//
+
+//====== Blocks position ==================================================//
 
 var div = document.createElement('div');
   div.className = "features__bottom";

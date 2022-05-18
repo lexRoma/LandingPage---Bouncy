@@ -911,7 +911,7 @@ html {
 
 	position: absolute;
 	top: 30%;
-
+	display: block;
 	
 	z-index: 2;
 
@@ -1647,9 +1647,9 @@ html {
 
 /*====Slick-slider====*/
 
-.blog__slider .slick-slider {
+/* .blog__slider .slick-slider {
 	
-}
+} */
 
 .blog__slider .slick-track {
 	display: block;
